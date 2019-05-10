@@ -8,6 +8,7 @@ public class PlayerControl : MonoBehaviour
     float jumpForce;
     float moveInput;
     Rigidbody2D rb;
+    public float health;
 
 
     // Start is called before the first frame update
@@ -25,6 +26,11 @@ public class PlayerControl : MonoBehaviour
       if(Input.GetKeyDown(KeyCode.UpArrow))
       {
          rb.velocity = Vector2.up * jumpForce;
+      }
+      if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+      {
+           health -= Time.deltaTime;
+           Debug.Log(health);
       }
 
     }

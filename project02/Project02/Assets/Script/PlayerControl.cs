@@ -11,8 +11,11 @@ public class PlayerControl : MonoBehaviour
     float moveInput;
     Rigidbody2D rb;
     public float health;
+<<<<<<< HEAD
     public static PlayerControl player;
     public Text scoretext;
+=======
+>>>>>>> 4061de85c2ebd8376c5ca17008d6199cec3db56e
 
 
     // Start is called before the first frame update
@@ -34,10 +37,16 @@ public class PlayerControl : MonoBehaviour
       }
       if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
       {
+<<<<<<< HEAD
          health -= Time.deltaTime;
          Debug.Log(health);
       }
       scoretext.text = "Health = " + health.ToString();
+=======
+           health -= Time.deltaTime;
+           Debug.Log(health);
+      }
+>>>>>>> 4061de85c2ebd8376c5ca17008d6199cec3db56e
 
     }
 

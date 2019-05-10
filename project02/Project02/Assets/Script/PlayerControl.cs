@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class PlayerControl : MonoBehaviour
 {
@@ -8,6 +10,9 @@ public class PlayerControl : MonoBehaviour
     float jumpForce;
     float moveInput;
     Rigidbody2D rb;
+    public float health;
+    public static PlayerControl player;
+    public Text scoretext;
 
 
     // Start is called before the first frame update
@@ -16,6 +21,7 @@ public class PlayerControl : MonoBehaviour
       speed = 8;
       jumpForce=6;
       rb=GetComponent<Rigidbody2D>();
+      health=100;
     }
 
     // Update is called once per frame
@@ -26,6 +32,12 @@ public class PlayerControl : MonoBehaviour
       {
          rb.velocity = Vector2.up * jumpForce;
       }
+      if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+      {
+         health -= Time.deltaTime;
+         Debug.Log(health);
+      }
+      scoretext.text = "Health = " + health.ToString();
 
     }
 

@@ -10,6 +10,7 @@ public class CollectItem : MonoBehaviour
       if(collision.gameObject.tag  == "food")
       {
           Destroy(collision.gameObject);
+          PlayerControl.player.health+=10;
       }
 
       if(collision.gameObject.tag == "exit")

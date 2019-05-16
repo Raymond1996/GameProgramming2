@@ -21,7 +21,7 @@ public class PlayerControl : MonoBehaviour
       speed = 8;
       jumpForce=6;
       rb=GetComponent<Rigidbody2D>();
-      health=100;
+      health=175;
     }
 
     // Update is called once per frame

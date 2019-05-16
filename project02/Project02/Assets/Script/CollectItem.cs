@@ -17,5 +17,9 @@ public class CollectItem : MonoBehaviour
       {
          SceneManager.LoadScene("Level02");
       }
+      if(collision.gameObject.tag == "end")
+      {
+        SceneManager.LoadScene("EndScene");
+      }
     }
 }
